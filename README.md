@@ -9,10 +9,8 @@ Node bindings for tabula-extractor
 tabula.js spawns a process call to java (via java -jar) to run tabula-extractor. It emits the stdout (extracted csv) and stderr (warnings and errors) as data and error events. It also emits a close event with exitCode.
 
 ### Example
-`
-var Tabula = require('../../../src/server/utils/tabula');
+`var Tabula = require('../../../src/server/utils/tabula');`
 var tabula = new Tabula();
-
 tabula.on('data', function(data) {
   console.log(data);
 });
@@ -22,7 +20,6 @@ tabula.on('error', function(err) {
 tabula.on('close', function(exitCode) {
   console.log(exitCode);
 });
-
 tabula.convertPdfToCsv(input);`
 
 ### Updating tabula-extractor.jar
