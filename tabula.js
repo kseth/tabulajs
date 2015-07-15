@@ -17,7 +17,7 @@ function Tabula() {
   events.EventEmitter.call(this);
 }
 
-var prototype = Tabulate.prototype;
+var prototype = Tabula.prototype;
 
 prototype.__proto__ = events.EventEmitter.prototype;
 
@@ -26,7 +26,7 @@ prototype.__proto__ = events.EventEmitter.prototype;
  * pageNumber is optional, defaults to 'all'
  * additionalArguments are optional (arguments to tabula-extractor)
  */
-prototype.convertPdfToCsv = function tabulate(inputFile, pageNumber, additionalArguments) {
+prototype.convertPdfToCsv = function convertPdfToCsv(inputFile, pageNumber, additionalArguments) {
   var self = this;
   var args = ['-jar', path.join(__dirname, 'lib', 'tabula-extractor.jar'), inputFile];
 

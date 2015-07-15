@@ -11,7 +11,7 @@ tabula.js spawns a process call to java (via java -jar) to run tabula-extractor.
 ### Example
 
 ```javascript
-    var Tabula = require('../../../src/server/utils/tabula');
+    var Tabula = require('tabulajs');
     var tabula = new Tabula();
     tabula.on('data', function(data) {
       console.log(data);
