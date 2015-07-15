@@ -11,22 +11,21 @@
 
 var spawn = require('child_process').spawn,
     path = require('path'),
+    util = require('util'),
     events = require('events');
 
 function Tabula() {
   events.EventEmitter.call(this);
 }
 
-var prototype = Tabula.prototype;
-
-prototype.__proto__ = events.EventEmitter.prototype;
+util.inherits(Tabula, events.EventEmitter);
 
 /**
  * name of inputFile
  * pageNumber is optional, defaults to 'all'
  * additionalArguments are optional (arguments to tabula-extractor)
  */
-prototype.convertPdfToCsv = function convertPdfToCsv(inputFile, pageNumber, additionalArguments) {
+Tabula.prototype.convertPdfToCsv = function convertPdfToCsv(inputFile, pageNumber, additionalArguments) {
   var self = this;
   var args = ['-jar', path.join(__dirname, 'lib', 'tabula-extractor.jar'), inputFile];
 
