@@ -1,8 +1,8 @@
 tabula.js
 =========
 
-Node bindings for tabula-extractor.
------------------------------------
+Node bindings for tabula-extractor
+----------------------------------
 
 ### Bindings
 
