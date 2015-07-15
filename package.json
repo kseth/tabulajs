@@ -1,0 +1,22 @@
+{
+  "name": "tabulajs",
+  "license": "MIT",
+  "version": "0.1.0",
+  "description": "Node bindings for the tabula-extractor library / CLI for extracting tables from pdf files.",
+  "keywords": [
+    "pdf",
+    "csv",
+    "spreadsheet",
+    "extraction"
+  ],
+  "homepage": "https://github.com/kseth/tabulajs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kseth/tabulajs.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "index.js",
+  "readmeFilename": "README.md",
+}
