@@ -48,7 +48,18 @@ Tabula.prototype.convertPdfToCsv = function convertPdfToCsv(inputFile, pageNumbe
   });
 
   childProcess.stderr.on('data', function(data) {
-    self.emit('error', data.toString());
+    // filter for error messages
+    // when java/ruby emit error messages on stderr
+    // they contain some version of "error:"
+    var errorMsg = data.toString();
+    if(errorMsg.toLowerCase().indexOf('error:') !== -1) {
+      self.emit('error', new Error("PDF Extraction Error: " + errorMsg));
+    }
+  });
+
+  // occurs on failure of spawn initiation/message passing/termination
+  childProcess.on('error', function(err) {
+    self.emit('error', err);
   });
 
   childProcess.on('close', function(exitCode) {

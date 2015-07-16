@@ -17,7 +17,7 @@ tabula.js spawns a process call to java (via java -jar) to run tabula-extractor.
       console.log(data);
     });
     tabula.on('error', function(err) {
-      console.log(err);
+      console.log(err.toString());
     });
     tabula.on('close', function(exitCode) {
       console.log(exitCode);
