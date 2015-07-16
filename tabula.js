@@ -21,7 +21,7 @@ function Tabula() {
 util.inherits(Tabula, events.EventEmitter);
 
 /**
- * name of inputFile
+ * name of inputFile <-- absolute path
  * pageNumber is optional, defaults to 'all'
  * additionalArguments are optional (arguments to tabula-extractor)
  */
