@@ -25,6 +25,9 @@ tabula.js spawns a process call to java (via java -jar) to run tabula-extractor.
     tabula.convertPdfToCsv(input);
 ```
 
+### Testing
+Run `npm install` then `make test` from the root of the repository to run the mocha unit tests.
+
 ### Updating tabula-extractor.jar
 
 See [tabula-extractor](https://github.com/tabulapdf/tabula-extractor) for the original from which this is obtained. A jar is made from this git repository by bundling the files.
